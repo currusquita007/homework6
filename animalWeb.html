@@ -22,7 +22,7 @@
             <input type="text" id="animal-input">
             <br>
             <!-- Button triggers new animal to be added -->
-            <input id="addAnimal" type="submit" value="Add an Animal">
+            <input id="addAnimal" type="submit" value="Submit">
         </form>
         <!-- Animals will Get Dumped Dere -->
         <div id="animalsView">
@@ -79,6 +79,7 @@
                     animalImage.attr('data-animate', results[i].images.fixed_height.url);
                     animalImage.attr('data-state', 'still');
                     animalImage.addClass('gif');
+                    
 
 
                     // Append the p variable to the animalDiv variable.
@@ -86,6 +87,7 @@
                     animalDiv.append(p);
                     // Append the animalImage variable to the animalDiv variable.
                     animalDiv.append(animalImage);
+                    animalDiv.css('float','left');
                     // Prepend the animalDiv variable to the element with an id of gifs-appear-here.
                     $("#animalsView").prepend(animalDiv);
 
